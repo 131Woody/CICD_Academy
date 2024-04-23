@@ -14,7 +14,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: |
-        docker build . --file Dockerfile --tag car-app-list:$(date +%s)
-        docker image ls
+    - uses: uses: 131woody/CICD_Academy/.github/actions/docker_build@main
+  

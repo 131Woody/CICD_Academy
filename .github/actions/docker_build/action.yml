@@ -8,3 +8,4 @@ runs:
       run: |
         docker build . --file Dockerfile --tag car-app-list:$(date +%s)
         docker image ls
+      shell: bash

@@ -23,8 +23,11 @@ runs:
           echo "TAG=$(date +%s)" >> $GITHUB_ENV
         else
           echo "TAG=${{ inputs.tag_name }}" >> $GITHUB_ENV
-        fi
-        echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}:$TAG" >> $GITHUB_ENV
+        fi    
+      shell: bash
+
+    - name:
+      run: echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}:$TAG" >> $GITHUB_ENV
       shell: bash
 
     - name: Build the Docker image

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: cars
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cars
+  template:
+    metadata:
+      labels:
+        app: cars
+    spec:
+      containers:
+      - name: car-container
+        image: car-image
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: Never

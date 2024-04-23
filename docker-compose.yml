@@ -1,0 +1,16 @@
+services:
+  postgres-container:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=1234
+  car-container:
+    build: ./
+    ports:
+      - 8080:8080
+volumes:
+  pgdata:

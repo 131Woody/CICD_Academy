@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    app: app-service
+  namespace: academy
+spec:
+  selector:
+    app: cars
+  ports:
+    - protocol: TCP
+      port: 8080 #podia ser outra
+      targetPort: 8080 #ouvir
+  type: LoadBalancer

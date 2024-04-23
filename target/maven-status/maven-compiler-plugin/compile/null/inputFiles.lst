@@ -1,0 +1,8 @@
+/home/ctwrenatateixeira/support-material/docker-k8s-cicd/Base-Version/src/main/java/domain/entity/Car.java
+/home/ctwrenatateixeira/support-material/docker-k8s-cicd/Base-Version/src/main/java/api/CarApi.java
+/home/ctwrenatateixeira/support-material/docker-k8s-cicd/Base-Version/src/main/java/application/Config.java
+/home/ctwrenatateixeira/support-material/docker-k8s-cicd/Base-Version/src/main/java/domain/service/CarCRUD.java
+/home/ctwrenatateixeira/support-material/docker-k8s-cicd/Base-Version/src/main/java/api/dto/request/CarRequest.java
+/home/ctwrenatateixeira/support-material/docker-k8s-cicd/Base-Version/src/main/java/domain/assembler/DomainAssembler.java
+/home/ctwrenatateixeira/support-material/docker-k8s-cicd/Base-Version/src/main/java/infrastructure/database/entity/CarEntity.java
+/home/ctwrenatateixeira/support-material/docker-k8s-cicd/Base-Version/src/main/java/infrastructure/database/repository/CarRepository.java

@@ -15,7 +15,7 @@ runs:
   using: composite
   steps:
     - name:
-      run: docker tag $TAG renatateixeira725/${{inputs.image_name}}
+      run: docker tag ${{inputs.image_name}} renatateixeira725/${{inputs.image_name}}
       shell: bash
       
     - name:

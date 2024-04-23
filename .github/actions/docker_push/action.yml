@@ -1,0 +1,21 @@
+name: Push Docker image
+description: Action to push the created docker image
+inputs:
+  dockerhub_username:
+    description: "Username of the DockerHub"
+    required: true
+    default: "Dockerfile"
+
+  image_name:
+    description: "Name for the generated Docker image"
+    required: false
+    default: "car-app-list"
+
+runs:
+  using: composite
+  steps:
+    - name:
+      run: |
+          docker tag $TAG {{inputs.dockerhub_username}}.com/{{inputs.image_name}}
+          docker push {{inputs.dockerhub_username}}.com/{{inputs.image_name}}
+      shell: bash

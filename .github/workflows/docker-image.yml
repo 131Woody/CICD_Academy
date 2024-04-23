@@ -15,4 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: 131Woody/CICD_Academy/.github/actions/docker_build@main
+      with: 
+        tag_name: 'v1'
+        image_name: 'car-app-list'
+
   

@@ -1,11 +1,33 @@
 name: Build Docker image
-description: build docker image and list all docker images
+description: Action to build the docker image
+inputs:
+  path_dockerfile:
+    description: "Path to the Dockerfile"
+    required: true
+    default: "Dockerfile"
+
+  image_name:
+    description: "Name for the generated Docker image"
+    required: false
+    default: "car-app-list"
+  
+  tag_name:
+    description: "Tag to be added to the final image"
 
 runs:
   using: composite
   steps:
+    - name:
+      run: |
+        if [ -z "${{ inputs.tag_name }}" ]; then
+          echo "TAG=$(date +%s)" >> $GITHUB_ENV
+        else
+          echo "TAG=${{ inputs.tag_name }}" >> $GITHUB_ENV
+        fi
+        echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}:$TAG" >> $GITHUB_ENV
+
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag car-app-list:$(date +%s)
+        docker build . --file ${{inputs.path_dockerfile}} --tag $DOCKER_IMAGE_NAME
         docker image ls
       shell: bash

@@ -24,6 +24,9 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    
-
+    - name: Push to Docker Hub
+      uses: 131Woody/CICD_Academy/.github/actions/docker_push@main 
+      with:
+        dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+        image_name: car-app-list
   

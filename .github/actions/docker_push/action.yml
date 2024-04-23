@@ -4,7 +4,7 @@ inputs:
   dockerhub_username:
     description: "Username of the DockerHub"
     required: true
-    default: "Dockerfile"
+    default: "renatateixeira725"
 
   image_name:
     description: "Name for the generated Docker image"

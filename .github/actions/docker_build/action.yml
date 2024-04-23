@@ -1,5 +1,5 @@
 name: Build Docker image
-description: {{ action-description }}
+description: build docker image and list all docker images
 
 runs:
   using: composite

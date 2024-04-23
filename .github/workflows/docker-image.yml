@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag car-app-list:$(date +%s)
-        docker images ls
+        docker images

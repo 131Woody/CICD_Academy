@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: 131Woody/CICD_Academy/.github/actions/docker_build@main
       with: 
-        tag_name: 'v1'
-        image_name: 'car-app-list'
+        tag_name: v1
+        image_name: car-app-list
 
   
